@@ -5,7 +5,7 @@ import json
 
 def lambda_handler(event, context):
     
-    conn = pymysql.connect(host = 'url',
+    conn = pymysql.connect(host = 'host_url',
                        user = 'user',
                        password = 'password',
                        database = 'database',
