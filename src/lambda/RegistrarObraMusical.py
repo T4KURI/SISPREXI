@@ -5,10 +5,10 @@ import json
 
 def lambda_handler(event, context):
     
-    conn = pymysql.connect(host = 'database-mysql.c3ecu4syhg5e.us-east-1.rds.amazonaws.com',
-                       user = 'admin',
-                       password = 'admin123',
-                       database = 'PRY20220223',
+    conn = pymysql.connect(host = 'url',
+                       user = 'user',
+                       password = 'password',
+                       database = 'database',
                        port = 3306)
     cur = conn.cursor()
     cur.execute('''INSERT INTO Obra_Musical(Titulo, Tipo_Obra) VALUES ('%s', '%s')''' % (event['titulo'], event['tipoobra']))
